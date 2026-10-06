@@ -1,0 +1,17 @@
+{% extends "base.html" %}{% block title %}Create Profile{% endblock %}{% block content %}<main class="container"><section class="hero"><span>🐍 Python Flask Project</span>
+    <h1>User Profile Card Generator</h1>
+    <p>Create a profile card. The form is processed on the server and stored in SQLite.</p>
+</section>
+<section class="card">
+    <h2>📝 Create Your Profile</h2><form method="post">
+        <div class="grid">
+            <div>
+                <label>Full Name *</label><input name="name" placeholder="e.g. Yogesh Bharati" required>
+            </div>
+            <div><label>Skills *</label><input name="skills" placeholder="Python, HTML, CSS, MySQL" required></div>
+        </div><label>Bio *</label><textarea name="bio" rows="5" placeholder="Write a short introduction..." required></textarea>
+        <h3>🔗 Social Links</h3><div class="grid three">
+            <div><label>GitHub</label><input type="url" name="github" placeholder="https://github.com/username"></div>
+            <div><label>LinkedIn</label><input type="url" name="linkedin" placeholder="https://linkedin.com/in/username"></div>
+            <div><label>Instagram</label><input type="url" name="instagram" placeholder="https://instagram.com/username"></div>
+        </div><button type="submit">🚀 Generate Profile Card</button></form></section></main>{% endblock %}
